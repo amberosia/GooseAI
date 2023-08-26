@@ -4,9 +4,8 @@ Have an image of your friend and wanna see how large their percentage of goose i
 Load up any image file and our custom AI model trained on a databank of more than 6000 images will do all the work
 \
 \
-Note for Goose Hacks jury: We did not include the bot's authorization token that allows the code to run. If that's necessary, please DM jamberosia or ar.vi on Discord!
-\
-\
+Note for Goose Hacks jury: We did not include the bot's authorization token that allows the code to run. If that's necessary, please DM jamberosia or ar.vi on Discord! However, you can use the bot for yourself with [this invite link](https://discord.com/api/oauth2/authorize?client_id=1144961347520573500&permissions=277025508352&scope=bot).
+
 Not Goose             |  Goose
 :-------------------------:|:-------------------------:
 ![to](https://github.com/amberosia/GooseBot-AI/assets/89476135/6e1009f8-3c7d-4363-873a-036b4de76d42)  |   ![image](https://github.com/amberosia/GooseBot-AI/assets/89476135/bd247c61-39a5-404b-988d-4a26cab6bc57)
