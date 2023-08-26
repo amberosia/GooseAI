@@ -1,11 +1,8 @@
 import tensorflow as tf
-from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential
 import matplotlib.pyplot as plt
-import numpy as np
 
-# the data, split between train and test sets
 batch_size = 128
 img_height = 256
 img_width = 256
@@ -30,9 +27,7 @@ val_ds = tf.keras.utils.image_dataset_from_directory(
 
 class_names = train_ds.class_names
 
-print(class_names)
-
-'''plt.figure(figsize=(10, 10))
+plt.figure(figsize=(10, 10))
 for images, labels in train_ds.take(1):
     for i in range(9):
         ax = plt.subplot(3, 3, i + 1)
@@ -41,9 +36,9 @@ for images, labels in train_ds.take(1):
         plt.axis("off")
 
 for image_batch, labels_batch in train_ds:
-  print(image_batch.shape)
-  print(labels_batch.shape)
-  break
+    print(image_batch.shape)
+    print(labels_batch.shape)
+    break
 
 AUTOTUNE = tf.data.AUTOTUNE
 
@@ -55,8 +50,6 @@ normalization_layer = layers.Rescaling(1./255)
 normalized_ds = train_ds.map(lambda x, y: (normalization_layer(x), y))
 image_batch, labels_batch = next(iter(normalized_ds))
 first_image = image_batch[0]
-# Notice the pixel values are now in `[0,1]`.
-print(np.min(first_image), np.max(first_image))
 
 num_classes = len(class_names)
 
@@ -77,7 +70,7 @@ model.compile(optimizer='adam',
               loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
               metrics=['accuracy'])
 
-epochs=10
+epochs = 10
 history = model.fit(
   train_ds,
   validation_data=val_ds,
@@ -85,4 +78,4 @@ history = model.fit(
 )
 
 model.save('gooseModel.h5')
-print("Saving the model as mnist.h5")'''
+print("Model saved")
